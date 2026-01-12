@@ -24,7 +24,7 @@ jobs:
         options: --health-cmd pg_isready --health-interval 20s --health-timeout 60s --health-retries 5
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: create new empty database
         run: |
           psql -d postgresql://postgres@localhost/postgres -U postgres -tc "create database pgmemento_testdb"

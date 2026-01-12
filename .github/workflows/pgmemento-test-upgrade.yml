@@ -24,7 +24,7 @@ jobs:
         options: --health-cmd pg_isready --health-interval 20s --health-timeout 10s --health-retries 5
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
         with:
           ref: refs/tags/v0.7.3
       - name: create new empty database of v0.7.3
